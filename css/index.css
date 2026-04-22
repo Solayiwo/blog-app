@@ -1,0 +1,167 @@
+/* body {
+  background-color: black;
+} */
+
+:root {
+  --primary-color: #007bff;
+  --danger-color: #dc3545;
+  --bg-gray: #f4f7f6;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: var(--primary-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Title Styling */
+.app-header h1 {
+  font-size: 1.8rem;
+  color: #ffff;
+  margin: 0;
+}
+
+/* Button Group Container */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between Login and + buttons */
+}
+
+/* General Header Button Styling */
+.header-actions button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* Login/Logout Button (Secondary) */
+.btn-secondary {
+  background-color: #f0f2f5;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:active {
+  background-color: #e4e6e9;
+  transform: scale(0.95);
+}
+
+/* Create Button (Primary Action) */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  width: 40px; /* Make it a circle or square */
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary:active {
+  transform: scale(0.9);
+  background-color: #0056b3;
+}
+
+#post-feed {
+  padding: 15px;
+  background-color: var(--bg-gray);
+  min-height: 100vh;
+}
+
+.post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.post-card:active {
+  transform: scale(0.98); /* Tactile feedback for mobile users */
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.post-title {
+  margin: 8px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.post-excerpt {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-edit {
+  background: #e7f1ff;
+  color: var(--primary-color);
+}
+.btn-delete {
+  background: #fff5f5;
+  color: var(--danger-color);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim the background */
+  display: none; /* JS will change this to 'flex' */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+textarea {
+  height: 150px;
+}
